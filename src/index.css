@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@theme {
+  /* Light mode */
+  --color-bg-light: oklch(96.7% .003 264.542); /* soft white-gray */
+  --color-text-light: #666;
+  --color-primary-light: #e5e5e5; /* neutral light gray for sidebar */
+
+  /* Dark mode */
+  --color-bg-dark: #0f172a;
+  --color-text-dark: #f1f5f9;
+  --color-primary-dark: #1e293b; /* dark sidebar */
+}
+@custom-variant dark (&:where(.dark, .dark *));
