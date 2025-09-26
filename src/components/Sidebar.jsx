@@ -63,8 +63,8 @@ export default function Sidebar({ isOpen, onClose }) {
       `}
     >
       {/* Profile */}
-      <div className="flex flex-row items-center py-4">
-        <img src="/me.jpg" alt="Profile" width={40} height={40} className="rounded-full" />
+      <div className="flex flex-row items-center py-4 border-b-1 border-gray-200">
+        <img src="/src/assets/profile-image.jpg" alt="Profile" width={40} height={40} className="rounded-sm md:mx-auto ml-3" />
         <button
           className="absolute top-4 right-4 md:hidden hover:bg-gray-200 cursor-pointer px-3 py-2 rounded-lg"
           onClick={onClose}
@@ -75,7 +75,7 @@ export default function Sidebar({ isOpen, onClose }) {
       </div>
 
       {/* Navigation */}
-      <nav className="flex flex-col flex-grow items-center lg:items-start px-2">
+      <nav className="flex flex-col items-center lg:items-start px-2 mb-5">
         <NavItem href="#home" icon={House} label="Home" />
         <NavItem href="#about" icon={User} label="About" />
         <NavItem href="#portfolio" icon={Briefcase} label="Portfolio" />
