@@ -11,3 +11,6 @@
   --color-primary-dark: #1e293b; /* dark sidebar */
 }
 @custom-variant dark (&:where(.dark, .dark *));
+*{
+  font-family: 'Cairo', sans-serif;
+}

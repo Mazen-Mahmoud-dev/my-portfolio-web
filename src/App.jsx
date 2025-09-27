@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import Hero from "./sections/Hero";
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(() => {
@@ -29,9 +30,8 @@ export default function App() {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Page content */}
-      <main className="flex-1 ml-0 sm:ml-20 p-6 mt-14 sm:mt-0 dark:bg-gray-900 dark:text-white">
-        <h1 className="text-2xl font-bold mb-4">Main Content</h1>
-        <p>Resize the window to see the responsive sidebar behavior.</p>
+      <main className="flex-1 ml-0 sm:ml-16 p-6 mt-14 sm:mt-16 dark:bg-gray-900 dark:text-white">
+        <Hero />
       </main>
 
       {/* Overlay for small screens */}

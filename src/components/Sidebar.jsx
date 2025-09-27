@@ -66,7 +66,7 @@ export default function Sidebar({ isOpen, onClose }) {
       <div className="flex flex-row items-center py-4 border-b-1 border-gray-200">
         <img src="/src/assets/profile-image.jpg" alt="Profile" width={40} height={40} className="rounded-sm md:mx-auto ml-3" />
         <button
-          className="absolute top-4 right-4 md:hidden hover:bg-gray-200 cursor-pointer px-3 py-2 rounded-lg"
+          className="absolute top-4 right-4 sm:hidden hover:bg-gray-200 cursor-pointer px-3 py-2 rounded-lg dark:text-white"
           onClick={onClose}
           aria-label="Close sidebar"
         >
