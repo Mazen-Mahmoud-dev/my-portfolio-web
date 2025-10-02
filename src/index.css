@@ -6,9 +6,10 @@
   --color-primary-light: #e5e5e5; /* neutral light gray for sidebar */
 
   /* Dark mode */
-  --color-bg-dark: #0f172a;
+  --color-dark: #0f172a;
   --color-text-dark: #f1f5f9;
-  --color-primary-dark: #1e293b; /* dark sidebar */
+  --color-primary-dark: #1e293b;
+  --color-primary-dark:#0b5b7a; /* dark sidebar */
 }
 @custom-variant dark (&:where(.dark, .dark *));
 *{

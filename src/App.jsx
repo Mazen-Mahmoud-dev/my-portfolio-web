@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Hero from "./sections/Hero";
+import Articles from "./sections/Articles";
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(() => {
@@ -30,8 +31,9 @@ export default function App() {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Page content */}
-      <main className="flex-1 ml-0 sm:ml-16 p-6 mt-14 sm:mt-16 dark:bg-gray-900 dark:text-white">
+      <main className="flex-1 ml-0 sm:ml-32 p-6 mt-14 sm:mt-16 dark:bg-gray-900 dark:text-white">
         <Hero />
+        <Articles />
       </main>
 
       {/* Overlay for small screens */}

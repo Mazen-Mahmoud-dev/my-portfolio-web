@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Bookmark } from "lucide-react";
+import FrontEndSkills from "../components/FrontEndSkills";
 
 
 const Hero = () => {
@@ -14,7 +15,7 @@ const Hero = () => {
       <div className="hero-fade">
         <h2 className='text-3xl font-bold text-center sm:text-left dark:text-white hero-fade'><span className='text-4xl' >Hello!</span> I'm Mazen Mahmoud <span className="text-5xl">👋</span></h2>
       <h2 className="text-3xl font-bold text-center sm:text-left mt-5 text-gray-500 hero-fade dark:text-white">Front End Developer | React.js | Data Scientist</h2>
-      <p className=" max-w-5xl text-[#666666] text-lg w-3/4 dark:text-[#FFFFFF]/60 hero-fade text-center sm:text-left mt-5">As a passionate Front-end Developer, I love crafting responsive, visually engaging, and user-friendly web experiences with React.js and Tailwind CSS.
+      <p className=" max-w-5xl text-[#666666] text-lg md:w-3/4 dark:text-[#FFFFFF]/60 hero-fade mt-5">As a passionate Front-end Developer, I love crafting responsive, visually engaging, and user-friendly web experiences with React.js and Tailwind CSS.
         I’m also building my skills in data science, using Python, pandas, NumPy, scikit-learn, and Seaborn to analyze data and uncover insights.</p>
       </div>
       <div className="flex flex-col sm:flex-row sm:justify-start gap-5 mt-10 w-full">
@@ -46,6 +47,7 @@ const Hero = () => {
           Get My CV
         </a>
       </div>
+      <FrontEndSkills />
     </div>
   )
 }
