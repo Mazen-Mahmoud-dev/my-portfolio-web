@@ -1,5 +1,5 @@
-// ArticlesSection.jsx
-import React from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
+
 
 const articles = [
   {
@@ -41,8 +41,9 @@ const truncateByWords = (text, wordLimit) => {
 };
 
 export default function Articles() {
+  const rootRef = useScrollReveal(".article-card", { start: "top 80%", stagger: 0.2 });
   return (
-    <section className="my-16 px-4 max-w-6xl mx-auto">
+    <section className="my-16 px-4 max-w-6xl mx-auto" ref={rootRef}>
       <div className="text-center mb-12">
         <h5 className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">What I Have Wrote</h5>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200">My Useful Articles</h2>
@@ -52,7 +53,7 @@ export default function Articles() {
         {articles.slice(0, 3).map((article) => (
           <div
             key={article.id}
-            className="w-full group dark:hover:shadow-primary-dark dark:hover:border-primary-dark relative grid gap-8 xl:grid-cols-2 overflow-hidden rounded-xl border border-zinc-200 bg-white p-1 shadow-sm transition-all duration-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
+            className="article-card w-full group dark:hover:shadow-primary-dark dark:hover:border-primary-dark relative grid gap-8 xl:grid-cols-2 overflow-hidden rounded-xl border border-zinc-200 bg-white p-1 shadow-sm transition-all duration-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
           >
             {/* الصورة */}
             <div className="relative overflow-hidden rounded-lg">

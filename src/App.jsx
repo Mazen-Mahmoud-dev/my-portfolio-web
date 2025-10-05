@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Hero from "./sections/Hero";
 import Articles from "./sections/Articles";
+import Achievements from "./sections/Achievments";
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(() => {
@@ -33,7 +34,9 @@ export default function App() {
       {/* Page content */}
       <main className="flex-1 ml-0 sm:ml-32 p-6 mt-14 sm:mt-16 dark:bg-gray-900 dark:text-white">
         <Hero />
+
         <Articles />
+        <Achievements />
       </main>
 
       {/* Overlay for small screens */}

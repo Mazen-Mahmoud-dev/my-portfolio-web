@@ -1,14 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Bookmark } from "lucide-react";
-import FrontEndSkills from "../components/FrontEndSkills";
-
+import FrontEndSkills from "./FrontEndSkills";
 
 const Hero = () => {
   useGSAP(() => {
-  gsap.from(".hero-fade", { opacity: 0, y: 40, duration: 1.2, stagger: 0.2, ease: "power3.out" });
-  gsap.from(".hero-btn",  { opacity: 0, y: 30, duration: 1,   stagger: 0.2, ease: "power3.out" });
-});
+    gsap.from(".hero-fade", { opacity: 0, y: 40, duration: 1.2, stagger: 0.2, ease: "power3.out" });
+    gsap.from(".hero-btn",  { opacity: 0, y: 30, duration: 1,   stagger: 0.2, ease: "power3.out" });
+  });
 
   return (
     <div>
@@ -48,6 +47,7 @@ const Hero = () => {
         </a>
       </div>
       <FrontEndSkills />
+      
     </div>
   )
 }

@@ -1,9 +1,5 @@
-// FrontEndSkills.jsx
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useScrollReveal from "../hooks/useScrollReveal";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const frontEndSkills = [
   { name: "React.js", role: "Framework", icon: "https://xnuaqhaffihsznkcddiy.supabase.co/storage/v1/object/public/skills//react.svg" },
@@ -16,42 +12,8 @@ const frontEndSkills = [
 ];
 
 export default function FrontEndSkills() {
-  const rootRef = useRef(null);
+  const rootRef = useScrollReveal(".skill-card", { start: "top 80%", stagger: 0.2 });
 
-  useEffect(() => {
-    const root = rootRef.current;
-    if (!root) return;
-
-    // scope selector to this section only
-    const cards = root.querySelectorAll(".skill-card");
-
-    // make sure every card starts hidden and slightly lower
-    gsap.set(cards, { autoAlpha: 0, y: 20, willChange: "opacity, transform" });
-
-    // timeline with ScrollTrigger
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: root,
-        start: "top 85%",       // when top of section hits 85% of viewport
-        toggleActions: "play none none reverse",
-        // markers: true, // uncomment for debugging
-      },
-    });
-
-    tl.to(cards, {
-      autoAlpha: 1,
-      y: 0,
-      duration: 0.6,
-      ease: "power2.out",
-      stagger: 0.12,
-    });
-
-    return () => {
-      // cleanup
-      tl.kill();
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
 
   return (
     <section id="skills" ref={rootRef} className="my-16 px-4">
@@ -66,9 +28,9 @@ export default function FrontEndSkills() {
             key={skill.name}
             className="skill-card flex items-center gap-4 p-6 rounded-2xl
                        bg-gray-100 dark:bg-zinc-900 border border-transparent
-                       hover:bg-transparent hover:border-indigo-500 hover:scale-[1.05]
+                       hover:bg-transparent hover:border-emerald-500 hover:!scale-[1.05]
                        transition-all duration-300"
-            style={{ willChange: "transform, opacity" }}
+            
             aria-label={`${skill.name} — ${skill.role}`}
           >
             <img src={skill.icon} alt={skill.name} width={48} height={48} className="flex-shrink-0" />

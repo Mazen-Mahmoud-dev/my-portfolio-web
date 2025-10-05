@@ -12,6 +12,14 @@
   --color-primary-dark:#0b5b7a; /* dark sidebar */
 }
 @custom-variant dark (&:where(.dark, .dark *));
+@layer utilities {
+  .text-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200;
+  }
+  .text-subtitle {
+    @apply text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest;
+  }
+}
 *{
   font-family: 'Cairo', sans-serif;
 }
