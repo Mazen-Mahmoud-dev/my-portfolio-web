@@ -14,7 +14,7 @@ const Achievements = () => {
     { number: 10, label: "Tech Tools Mastered" },
   ];
 
-  useEffect(() => {
+  useGSAP(() => {
     const root = rootRef.current;
     if (!root) return;
 

@@ -10,7 +10,7 @@ const Hero = () => {
   });
 
   return (
-    <div>
+    <div className="md:ml-28">
       <div className="hero-fade">
         <h2 className='text-3xl font-bold text-center sm:text-left dark:text-white hero-fade'><span className='text-4xl' >Hello!</span> I'm Mazen Mahmoud <span className="text-5xl">👋</span></h2>
       <h2 className="text-3xl font-bold text-center sm:text-left mt-5 text-gray-500 hero-fade dark:text-white">Front End Developer | React.js | Data Scientist</h2>

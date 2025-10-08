@@ -43,7 +43,7 @@ const truncateByWords = (text, wordLimit) => {
 export default function Articles() {
   const rootRef = useScrollReveal(".article-card", { start: "top 80%", stagger: 0.2 });
   return (
-    <section className="my-16 px-4 max-w-6xl mx-auto" ref={rootRef}>
+    <section className="my-16 md:px-8 max-w-7xl mx-auto md:ml-28" ref={rootRef}>
       <div className="text-center mb-12">
         <h5 className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">What I Have Wrote</h5>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200">My Useful Articles</h2>

@@ -23,3 +23,45 @@
 *{
   font-family: 'Cairo', sans-serif;
 }
+/* Swiper navigation arrows */
+.swiper {
+  width: 100%;
+  height: auto;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #087272 !important; /* emerald-500 */
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #333 !important;
+  background-color: #eee;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cert-swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.cert-swiper .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.cert-swiper .swiper-slide {
+  height: auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #eee;
+}

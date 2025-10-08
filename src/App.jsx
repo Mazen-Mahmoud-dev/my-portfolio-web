@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Hero from "./sections/Hero";
 import Articles from "./sections/Articles";
 import Achievements from "./sections/Achievments";
+import Certifications from "./sections/Certifications";
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(() => {
@@ -24,28 +25,23 @@ export default function App() {
   }, []);
 
   return (
-    <div className="flex dark:bg-gray-900">
-      {/* Navbar only on small screens */}
-      <Navbar onMenuClick={() => setSidebarOpen(true)} />
-
-      {/* Sidebar */}
+    <div className="min-h-screen flex overflow-x-hidden dark:bg-gray-900">
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-      {/* Page content */}
-      <main className="flex-1 ml-0 sm:ml-32 p-6 mt-14 sm:mt-16 dark:bg-gray-900 dark:text-white">
-        <Hero />
+      {/* THIS wrapper must have min-w-0 so flex children can shrink on small screens */}
+      <div className="flex-1 min-w-0">
+        <Navbar onMenuClick={() => setSidebarOpen(true)} />
 
-        <Articles />
-        <Achievements />
-      </main>
+        <main className="p-[20px] mt-14 sm:mt-16">
+          <Hero />
+          <Articles />
+          <Achievements />
+          <Certifications />
+        </main>
+      </div>
 
-      {/* Overlay for small screens */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 sm:hidden z-40"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
+      {/* mobile overlay */}
+      {sidebarOpen && <div className="fixed inset-0 bg-black/40 sm:hidden z-40" onClick={() => setSidebarOpen(false)} />}
     </div>
   );
 }
