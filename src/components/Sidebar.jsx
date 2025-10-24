@@ -10,10 +10,11 @@ import {
 import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 const NavItem = ({ href, icon: Icon, label }) => (
-  <a
-    href={href}
+  <Link
+    to={href}
     className="
       my-2 w-full flex items-center gap-4
       px-3 py-2 rounded-lg cursor-pointer
@@ -24,7 +25,7 @@ const NavItem = ({ href, icon: Icon, label }) => (
   >
     <Icon className="w-6 h-6" />
     <span className="inline sm:group-hover:inline sm:hidden font-medium">{label}</span>
-  </a>
+  </Link>
 );
 
 export default function Sidebar({ isOpen, onClose }) {
@@ -76,10 +77,10 @@ export default function Sidebar({ isOpen, onClose }) {
 
       {/* Navigation */}
       <nav className="flex flex-col items-center lg:items-start px-2 mb-5">
-        <NavItem href="#home" icon={House} label="Home" />
-        <NavItem href="#about" icon={User} label="About" />
-        <NavItem href="#portfolio" icon={Briefcase} label="Portfolio" />
-        <NavItem href="#contact" icon={Mail} label="Contact" />
+        <NavItem href="/" icon={House} label="Home" />
+        <NavItem href="/about" icon={User} label="About" />
+        <NavItem href="/portfolio" icon={Briefcase} label="Portfolio" />
+        <NavItem href="/contact" icon={Mail} label="Contact" />
       </nav>
 
       {/* Theme toggle */}
@@ -94,7 +95,7 @@ export default function Sidebar({ isOpen, onClose }) {
       </div>
 
       {/* Social Links */}
-      <div className="flex flex-col items-center space-y-3 mb-4">
+      <div className="flex flex-col items-center space-y-3 mb-4 group-hover:flex-row group-hover:justify-evenly group-hover:items-baseline group-hover:mt-8">
         <a href="https://wa.me/201148824619" className="text-green-500 text-2xl"><FaWhatsapp /></a>
         <a href="https://www.linkedin.com/in/mazen-mahmoud-dev" className="text-blue-500 text-2xl"><FaLinkedin /></a>
         <a href="https://github.com/mazen-mahmoud-dev" className="text-black dark:text-white text-2xl"><FaGithub /></a>

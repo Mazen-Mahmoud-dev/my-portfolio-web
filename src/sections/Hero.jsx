@@ -34,7 +34,7 @@ const Hero = () => {
 
         {/* Download CV Button */}
         <a
-          className="hero-btn w-full sm:w-auto justify-center group cursor-pointer flex items-center
+          className="hero-btn w-full sm:w-auto justify-center group dark:text-white cursor-pointer flex items-center
                     hover:bg-gray-100 dark:hover:text-black gap-2 border-2 py-1 px-6 text-lg
                     border-[#AEB1B7] rounded-md"
           href="/cv/MazenMahmoudCV.pdf"
@@ -46,7 +46,7 @@ const Hero = () => {
           Get My CV
         </a>
       </div>
-      <FrontEndSkills />
+      
       
     </div>
   )

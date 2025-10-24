@@ -16,7 +16,7 @@ export default function FrontEndSkills() {
 
 
   return (
-    <section id="skills" ref={rootRef} className="my-16 px-4">
+    <section id="skills" ref={rootRef} className="my-16 px-4 md:ml-28">
       <div className="text-center mb-12">
         <h5 className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">What Skills I Have</h5>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200">My Front-End Experience</h2>
@@ -46,7 +46,7 @@ export default function FrontEndSkills() {
         <a href="/all-skills">
           <button
             aria-label="View all skills"
-            className="border border-gray-400 cursor-pointer dark:border-gray-500 px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-100 dark:hover:text-black transition-colors duration-300 group"
+            className="border border-gray-400 cursor-pointer dark:text-white dark:border-gray-500 px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-100 dark:hover:text-black transition-colors duration-300 group"
           >
             All Skills
             <svg

@@ -49,7 +49,7 @@ export default function Articles() {
         <h2 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200">My Useful Articles</h2>
       </div>
 
-      <div className="grid gap-10">
+      <div className="grid md:grid-cols-2 gap-10">
         {articles.slice(0, 3).map((article) => (
           <div
             key={article.id}
@@ -126,7 +126,7 @@ export default function Articles() {
       {/* زرار All Articles */}
       <div className="flex justify-center mt-12">
         <a href="/articles">
-          <button className="border border-gray-400 cursor-pointer dark:border-gray-500 px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-100 dark:hover:text-black transition-colors duration-300 group">
+          <button className="border border-gray-400 cursor-pointer dark:border-gray-500 dark:text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-100 dark:hover:text-black transition-colors duration-300 group">
             All Articles
             <svg
               xmlns="http://www.w3.org/2000/svg"

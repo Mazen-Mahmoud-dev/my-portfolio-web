@@ -7,29 +7,30 @@ import { BiArrowBack,BiRightArrowAlt } from 'react-icons/bi';
 export default function Certifications() {
   const certifications = [
     {
+      title: "Ai & Machine Learning Bootcamp",
+      platform: "sprintsai",
+      date: "2025",
+      image: "/src/assets/certs/sprints&microsoft.jpg",
+    },
+    {
+      title: "Reactjs",
+      platform: "Mahara Tech",
+      date: "2025",
+      image: "/src/assets/certs/certificate-react-js-mahara-tech.jpg",
+    },
+    {
       title: "Mastering CSS",
       platform: "satr",
       date: "2025",
       image: "/src/assets/certs/certificate-satr-css-basics.png",
     },
     {
-      title: "Front-End Development",
-      platform: "Meta",
-      date: "2024",
-      image: "/certs/frontend.png",
+      title: "HTML & CSS",
+      platform: "Mahara Tech",
+      date: "2025",
+      image: "/src/assets/certs/cerificate-HTML&CSS-MaharaTech-EN.jpg",
     },
-    {
-      title: "Data Analysis with Python",
-      platform: "freeCodeCamp",
-      date: "2023",
-      image: "/certs/data.png",
-    },
-    {
-      title: "AI for Everyone",
-      platform: "DeepLearning.AI",
-      date: "2024",
-      image: "/certs/ai.png",
-    },
+    
   ];
 
   return (
@@ -64,6 +65,7 @@ export default function Certifications() {
                       src={cert.image}
                       alt={cert.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
                     <span className="absolute top-3 left-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                       {cert.platform}
