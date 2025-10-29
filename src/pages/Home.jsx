@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import Hero from "../sections/Hero";
 import Articles from "../sections/Articles";
 import Achievements from "../sections/Achievments";
