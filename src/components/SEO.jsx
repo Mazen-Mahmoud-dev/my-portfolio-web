@@ -1,9 +1,12 @@
+import { Title, Meta } from "react-head";
+
+
 const SEO = ({title,description}) => {
   return (
     <>
       <Helmet>
-        <title>{title}</title>
-        <meta
+        <Title>{title}</Title>
+        <Meta
           name="description"
           content={description}
         />
