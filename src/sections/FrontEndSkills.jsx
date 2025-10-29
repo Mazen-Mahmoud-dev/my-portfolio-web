@@ -11,7 +11,7 @@ const frontEndSkills = [
   { name: "Bootstrap", role: "CSS Framework", icon: "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" },
 ];
 
-export default function FrontEndSkills() {
+export default function FrontEndSkills({ hideAllButton = false }) {
   const rootRef = useScrollReveal(".skill-card", { start: "top 80%", stagger: 0.2 });
 
 
@@ -22,15 +22,14 @@ export default function FrontEndSkills() {
         <h2 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200">My Front-End Experience</h2>
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {frontEndSkills.map((skill) => (
           <article
             key={skill.name}
             className="skill-card flex items-center gap-4 p-6 rounded-2xl
-                       bg-gray-100 dark:bg-zinc-900 border border-transparent
-                       hover:bg-transparent hover:border-emerald-500 hover:!scale-[1.05]
+                       bg-gray-100 dark:bg-gray-800 border border-transparent
+                       hover:bg-transparent hover:border-blue-700 hover:!scale-[1.05]
                        transition-all duration-300"
-            
             aria-label={`${skill.name} — ${skill.role}`}
           >
             <img src={skill.icon} alt={skill.name} width={48} height={48} className="flex-shrink-0" />
@@ -42,7 +41,7 @@ export default function FrontEndSkills() {
         ))}
       </div>
 
-      <div className="mt-10 flex justify-center">
+      { !hideAllButton && <div className="mt-10 flex justify-center">
         <a href="/all-skills">
           <button
             aria-label="View all skills"
@@ -66,7 +65,7 @@ export default function FrontEndSkills() {
             </svg>
           </button>
         </a>
-      </div>
+      </div>}
     </section>
   );
 }

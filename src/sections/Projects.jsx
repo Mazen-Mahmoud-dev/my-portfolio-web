@@ -43,7 +43,7 @@ const truncateByWords = (text, wordLimit) => {
   return words.slice(0, wordLimit).join(" ") + "...";
 };
 
-const Projects = () => {
+const Projects = ({ hideAllButton = false }) => {
   const rootRef = useScrollReveal(".project-card", {
     start: "top 80%",
     stagger: 0.2,
@@ -100,7 +100,7 @@ const Projects = () => {
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="bg-emerald-50 dark:bg-emerald-100 font-semibold text-emerald-700 border border-emerald-200 py-0.5 px-3 rounded-full text-sm transition-colors"
+                      className="bg-slate-50 dark:bg-gray-800 dark:text-slate-100 font-semibold  text-gray-700 border border-gray-600 py-0.5 px-3 rounded-full text-sm transition-colors"
                     >
                       {tag}
                     </span>
@@ -113,7 +113,7 @@ const Projects = () => {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-emerald-600 hover:underline"
+                  className="flex items-center gap-1 text-gray-800 dark:text-slate-100 hover:underline"
                 >
                   View Project
                   <svg
@@ -138,7 +138,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-12">
+      {!hideAllButton && <div className="flex justify-center mt-12">
         <a href="/projects">
           <button className="border border-gray-400 cursor-pointer dark:border-gray-500 dark:text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-100 dark:hover:text-black transition-colors duration-300 group">
             All Projects
@@ -159,7 +159,7 @@ const Projects = () => {
             </svg>
           </button>
         </a>
-      </div>
+      </div> }
     </section>
   );
 };

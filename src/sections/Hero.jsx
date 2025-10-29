@@ -24,7 +24,7 @@ const Hero = () => {
             <button
               aria-label="Go to Projects page"
               className="hero-btn w-full cursor-pointer text-black dark:text-white
-                        bg-[#AEB1B7]/30 hover:bg-gray-200 dark:hover:text-black
+                        bg-[#AEB1B7]/30 hover:bg-gray-200 dark:bg-gray-800 dark:hover:text-black
                         py-2 px-6 rounded-md text-lg"
             >
               My Projects

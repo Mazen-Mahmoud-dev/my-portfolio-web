@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { BiArrowBack,BiRightArrowAlt } from 'react-icons/bi';
+import { ExternalLinkIcon } from "lucide-react";
 export default function Certifications() {
   const certifications = [
     {
@@ -41,7 +42,7 @@ export default function Certifications() {
           <h2 className="text-title">Certifications 📜</h2>
         </div>
 
-        <div className="relative w-full sm:ml-12">
+        <div className="relative w-full sm:w-[450px] sm:mx-auto">
           <Swiper
             modules={[Navigation]}
             navigation={{
@@ -52,8 +53,8 @@ export default function Certifications() {
             slidesPerView={1}
             breakpoints={{
               640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              768: { slidesPerView: 1 },
+              1024: { slidesPerView: 1 },
             }}
             className="!overflow-hidden"
           >
@@ -77,8 +78,8 @@ export default function Certifications() {
                     </h3>
                     <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
                       <p>{cert.date}</p>
-                      <span className="text-xs px-2 py-1 rounded-full bg-indigo-500/10 text-indigo-500 font-medium">
-                        Certified
+                      <span className="text-xs px-2 py-1 rounded-full  text-slate-300 hover:text-slate-100 hover:underline  font-medium">
+                        <a href="" className="flex items-center gap-1 text-sm font-bold"><ExternalLinkIcon className="w-[20px]" />View Certificate</a>
                       </span>
                     </div>
                   </div>
@@ -88,11 +89,11 @@ export default function Certifications() {
           </Swiper>
 
           {/* Navigation buttons */}
-          <button className="swiper-button-prev absolute top-1/2 -left-5 md:-left-10 z-10 transform -translate-y-1/2 bg-white/70 dark:bg-zinc-800/70 border border-gray-300 dark:border-gray-700 rounded-full p-2 shadow hover:bg-indigo-500 hover:text-white transition-all">
+          <button className="swiper-button-prev absolute top-1/2 -left-5 md:-left-10 z-10 transform -translate-y-1/2 bg-white/70 dark:bg-zinc-800/70 dark:!text-gray-100 border border-gray-300 dark:hover:!text-gray-800 dark:border-gray-700 rounded-full p-2 shadow hover:bg-gray-200 hover:text-white transition-all">
             <BiArrowBack size={18} />
           </button>
 
-          <button className="swiper-button-next absolute top-1/2 -right-5 md:-right-10 z-10 transform -translate-y-1/2 bg-white/70 dark:bg-zinc-800/70 border border-gray-300 dark:border-gray-700 rounded-full p-2 shadow hover:bg-indigo-500 hover:text-white transition-all">
+          <button className="swiper-button-next absolute top-1/2 -right-5 md:-right-10 z-10 transform -translate-y-1/2 bg-white/70 dark:bg-zinc-800/70 dark:!text-gray-100 border dark:hover:!text-gray-800 border-gray-300 dark:border-gray-700 rounded-full p-2 shadow hover:bg-gray-200 transition-all">
             <BiRightArrowAlt size={18} />
           </button>
         </div>

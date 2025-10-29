@@ -1,16 +1,24 @@
 @import "tailwindcss";
-@theme {
-  /* Light mode */
-  --color-bg-light: oklch(96.7% .003 264.542); /* soft white-gray */
-  --color-text-light: #666;
-  --color-primary-light: #e5e5e5; /* neutral light gray for sidebar */
-
-  /* Dark mode */
-  --color-dark: #0f172a;
-  --color-text-dark: #f1f5f9;
-  --color-primary-dark: #1e293b;
-  --color-primary-dark:#0b5b7a; /* dark sidebar */
+:root {
+  /* ===== Light Theme ===== */
+  --color-bg: oklch(97% 0.01 250); /* خلفية ناعمة قريبة من الأبيض */
+  --color-surface: #e5e7eb; /* كروت / سايدبار */
+  --color-text: #374151; /* رمادي غامق للقراءة الممتازة */
+  --color-text-secondary: #6b7280;
+  --color-primary: #2563eb; /* أزرق أنيق للأزرار أو الهايلايت */
+  --color-accent: #16a34a; /* أخضر ناعم للتأكيد */
 }
+
+[data-theme="dark"] {
+  /* ===== Dark Theme ===== */
+  --color-bg: #0F172A;
+  --color-surface: #1E293B;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-primary: #38bdf8;
+  --color-accent: #22c55e;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 @layer utilities {
   .text-title {
@@ -30,16 +38,11 @@
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color: #087272 !important; /* emerald-500 */
+  color: #333 !important; /* emerald-500 */
   transition: color 0.3s ease;
   z-index: 10;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: #333 !important;
-  background-color: #eee;
-}
 
 .swiper-button-next::after,
 .swiper-button-prev::after {

@@ -77,10 +77,10 @@ export default function LearningPath() {
       <div className="container max-w-5xl mx-auto text-center">
         {/* Title Section */}
         <div className="title-block opacity-0 translate-y-6 mb-10">
-          <p className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest mb-2">
+          <p className="text-gray-500 dark:text-slate-100 text-sm uppercase tracking-widest mb-2">
             My Learning Path
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold font-play">
+          <h2 className="text-3xl md:text-4xl font-bold font-play dark:text-slate-100">
             How I Started
           </h2>
         </div>
@@ -90,14 +90,14 @@ export default function LearningPath() {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="learning-card bg-white dark:bg-zinc-900 border border-transparent hover:border-gray-500 rounded-2xl p-6 shadow-md space-y-2 transition-all duration-300 hover:shadow-xl hover:scale-[1.03] opacity-0"
+              className="learning-card bg-slate-100  dark:bg-zinc-900 border border-transparent hover:border-gray-500 rounded-2xl p-6 shadow-md space-y-2 transition-all duration-300 hover:shadow-xl hover:scale-[1.03] opacity-0"
             >
               <div>{step.icon}</div>
               <div>
-                <h3 className="text-lg font-semibold mb-1">
+                <h3 className="text-lg font-semibold mb-1 dark:text-slate-100">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-gray-600 dark:text-slate-100">
                   {step.desc}
                 </p>
               </div>

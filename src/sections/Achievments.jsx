@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Achievements = () => {
@@ -108,7 +108,7 @@ const Achievements = () => {
               key={index}
               className="achievement-card flex flex-col items-center justify-center bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-2xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
             >
-              <h3 className="achievement-number text-5xl font-extrabold text-emerald-500 mb-2">
+              <h3 className="achievement-number text-5xl font-extrabold text-gray-600 dark:text-slate-100 mb-2">
                 +0
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-lg text-center">

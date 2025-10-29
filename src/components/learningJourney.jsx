@@ -61,7 +61,7 @@ export default function LearningJourney() {
         <p className="text-gray-500 mb-2 uppercase tracking-widest">
           My Learning Path
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-black">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-slate-100">
           My Learning Journey
         </h2>
       </div>
@@ -69,7 +69,7 @@ export default function LearningJourney() {
       {/* Timeline */}
       <div className="relative">
         {/* Center Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-emerald-200"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-cyan-300"></div>
 
         <div className="space-y-16">
           {journey.map((step, index) => {
@@ -82,26 +82,26 @@ export default function LearningJourney() {
                 }`}
               >
                 {/* Connector Dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 bg-white dark:bg-zinc-900 z-10">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 border-2 border-emerald-400 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 bg-slate-100 dark:bg-gray-900 z-10">
+                  <div className="w-6 h-6 rounded-full bg-slate-100 border-2 border-cyan-500 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
                   </div>
                 </div>
 
                 {/* Card */}
-                <div className="md:w-[46%] w-full bg-white dark:bg-zinc-900 border border-gray-200 rounded-xl p-6 md:px-12 md:mx-5 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-                  <div className="text-sm text-emerald-600 font-medium mb-2">
+                <div className="md:w-[46%] w-full bg-slate-100 dark:bg-gray-900 border border-slate-100 rounded-xl p-6 md:px-12 md:mx-5 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                  <div className="text-sm text-cyan-500 font-medium mb-2 dark:text-cyan-500">
                     {step.date}
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  <h3 className="text-lg font-semibold mb-2 dark:text-slate-100">{step.title}</h3>
+                  <p className="text-gray-600 dark:text-slate-100 mb-4 ">
                     {step.desc}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {step.tags.map((tag, i) => (
                       <span
                         key={i}
-                        className="bg-emerald-50 dark:bg-emerald-100 dark:hover:bg-emerald-200 font-semibold text-emerald-700 border border-emerald-200 hover:bg-emerald-100 text-sm px-3 py-0.5 rounded-full transition"
+                        className="bg-cyan-50 dark:bg-cyan-50 dark:hover:bg-cyan-200 font-semibold text-gray-900 border border-cyan-200 hover:bg-cyan-100 text-sm px-3 py-0.5 rounded-full transition"
                       >
                         {tag}
                       </span>

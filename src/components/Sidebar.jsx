@@ -24,7 +24,7 @@ const NavItem = ({ href, icon: Icon, label }) => (
     "
   >
     <Icon className="w-6 h-6" />
-    <span className="inline sm:group-hover:inline sm:hidden font-medium">{label}</span>
+    <span className="inline md:group-hover:inline md:hidden font-medium">{label}</span>
   </Link>
 );
 
@@ -55,19 +55,19 @@ export default function Sidebar({ isOpen, onClose }) {
       ref={asideRef}
       className={`
         group fixed top-0 left-0 z-50
-        flex flex-col h-screen sm:w-20 w-56 hover:w-56
+        flex flex-col h-screen md:w-20 w-56 hover:w-56
         bg-white dark:bg-black
         transition-all duration-300 ease-in-out
         border-r border-gray-200 dark:border-gray-700
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
-        sm:translate-x-0 sm:block
+        md:translate-x-0 md:block
       `}
     >
       {/* Profile */}
       <div className="flex flex-row items-center py-4 border-b-1 border-gray-200">
         <img src="/src/assets/profile-image.jpg" alt="Profile" width={40} height={40} className="rounded-sm md:mx-auto ml-3" />
         <button
-          className="absolute top-4 right-4 sm:hidden hover:bg-gray-200 cursor-pointer px-3 py-2 rounded-lg dark:text-white dark:hover:bg-gray-700 "
+          className="absolute top-4 right-4 md:hidden hover:bg-gray-200 cursor-pointer px-3 py-2 rounded-lg dark:text-white dark:hover:bg-gray-700 "
           onClick={onClose}
           aria-label="Close sidebar"
         >

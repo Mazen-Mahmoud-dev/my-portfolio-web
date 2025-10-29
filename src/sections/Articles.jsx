@@ -84,7 +84,7 @@ export default function Articles() {
                   {article.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="bg-emerald-50 dark:bg-emerald-100 font-semibold text-emerald-700 border border-emerald-200 py-0.5 px-3 rounded-full text-sm transition-colors"
+                      className="bg-slate-50 dark:bg-gray-800 dark:text-slate-100 font-semibold text-gray-700 border border-gray-600 py-0.5 px-3 rounded-full text-sm transition-colors"
                     >
                       {tag}
                     </span>
@@ -98,7 +98,7 @@ export default function Articles() {
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-emerald-600 hover:underline"
+                  className="flex items-center gap-1 text-gray-800 dark:text-slate-100 hover:underline"
                 >
                   Read More
                   <svg

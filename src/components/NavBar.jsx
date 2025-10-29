@@ -3,7 +3,7 @@ import { Menu } from "lucide-react";
 
 export default function Navbar({ onMenuClick }) {
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between flex-row-reverse bg-white dark:bg-black shadow px-4 h-14 sm:hidden">
+    <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between flex-row-reverse bg-white dark:bg-black shadow px-4 h-14 md:hidden">
       <button
         onClick={onMenuClick}
         className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer"

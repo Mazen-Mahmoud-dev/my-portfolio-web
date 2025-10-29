@@ -6,7 +6,6 @@ import Articles from "../sections/Articles";
 import Achievements from "../sections/Achievments";
 import Certifications from "../sections/Certifications";
 import Projects from "../sections/Projects";
-import Footer from "../sections/Footer";
 import FrontEndSkills from "../sections/FrontEndSkills";
 
 export default function Home() {
@@ -27,7 +26,6 @@ export default function Home() {
           <Certifications />
           <Projects />
         </main>
-        <Footer />
       </div>
       
 

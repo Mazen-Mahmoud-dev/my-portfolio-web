@@ -139,12 +139,12 @@ const Approach = () => {
       id="approach"
       className="py-20 mt-16 bg-gray-50 rounded-2xl dark:bg-zinc-900 transition-colors duration-500"
     >
-      <div className="container max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <div className="container max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8 md:mx-auto md:ml-14">
         <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm uppercase tracking-widest mb-2">
           More than just code
         </p>
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200 font-play mb-10 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text-slate-100 font-play mb-10 sm:mb-12">
           My Approach
         </h2>
 
@@ -152,7 +152,7 @@ const Approach = () => {
           {data.map((item, i) => (
             <div
               key={i}
-              className="approach-card flex flex-col items-start text-left p-6 sm:p-8 bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
+              className="approach-card flex flex-col items-start text-left p-6 sm:p-8 bg-slate-100 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
             >
               <div className={`${item.color} mb-4 text-3xl sm:text-4xl`}>
                 {item.icon}
