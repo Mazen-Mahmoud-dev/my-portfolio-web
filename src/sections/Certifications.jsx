@@ -11,25 +11,25 @@ export default function Certifications() {
       title: "Ai & Machine Learning Bootcamp",
       platform: "sprintsai",
       date: "2025",
-      image: "/src/assets/certs/sprints&microsoft.jpg",
+      image: "/assets/certs/sprints&microsoft.jpg",
     },
     {
       title: "Reactjs",
       platform: "Mahara Tech",
       date: "2025",
-      image: "/src/assets/certs/certificate-react-js-mahara-tech.jpg",
+      image: "/assets/certs/certificate-react-js-mahara-tech.jpg",
     },
     {
       title: "Mastering CSS",
       platform: "satr",
       date: "2025",
-      image: "/src/assets/certs/certificate-satr-css-basics.png",
+      image: "/assets/certs/certificate-satr-css-basics.png",
     },
     {
       title: "HTML & CSS",
       platform: "Mahara Tech",
       date: "2025",
-      image: "/src/assets/certs/cerificate-HTML&CSS-MaharaTech-EN.jpg",
+      image: "/assets/certs/cerificate-HTML&CSS-MaharaTech-EN.jpg",
     },
     
   ];

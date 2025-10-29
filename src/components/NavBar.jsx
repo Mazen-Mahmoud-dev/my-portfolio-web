@@ -12,7 +12,7 @@ export default function Navbar({ onMenuClick }) {
         <Menu className="w-6 h-6 text-gray-700 dark:text-gray-200" />
       </button>
       <span>
-        <img src="/src/assets/profile-image.jpg" alt="Profile" width={30} height={30} className="rounded-sm" />
+        <img src="/assets/profile-image.jpg" alt="Profile" width={30} height={30} className="rounded-sm" />
       </span>
     </header>
   );

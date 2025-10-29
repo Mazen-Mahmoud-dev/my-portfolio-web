@@ -8,7 +8,7 @@ const articles = [
     excerpt: `🎯 الأهم من إنك تحضر الكورسات وتشوفها إنك تطبق عليها 👌
 في البوست ده شاركت أفكار مشاريع مناسبة للمبتدئين والمتوسطين وكمان للي بدأوا يتعلموا React.
 من Landing Page لحد Blog UI، مع فيديوهات تساعدك تنفذ خطوة بخطوة.`,
-    image: "/src/assets/Articles/Article1.jpg",
+    image: "/assets/Articles/Article1.jpg",
     url: "https://www.linkedin.com/posts/mazen-mahmoud-dev_frontend-aetaecaepaezaeyaehabraeqaezaetaeuaer-activity-7354887682268815360-UkXB?utm_source=share&utm_medium=member_desktop",
     tags: ["Frontend", "React", "JavaScript", "مشاريع برمجة"],
   },
@@ -18,7 +18,7 @@ const articles = [
     excerpt: `لو فاكر إنك عارف CSS كويس، جرب الtricks دي 😎
 من aspect-ratio لحد prefers-color-scheme، 
 هتعرف إزاي تحل مشاكل معقدة بكود بسيط وتختصر وقت كبير في مشاريعك.`,
-    image: "/src/assets/Articles/Article2.png",
+    image: "/assets/Articles/Article2.png",
     url: "https://www.linkedin.com/posts/mazen-mahmoud-dev_4cafef-4cafef-ddd-activity-7360698342990934016-EcfX?utm_source=share&utm_medium=member_desktop",
     tags: ["CSS", "Frontend", "Web Design", "UI Tricks"],
   },
