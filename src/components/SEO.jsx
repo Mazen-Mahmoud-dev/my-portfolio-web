@@ -1,6 +1,5 @@
 import { Title, Meta } from "react-head";
 
-
 const SEO = ({title,description}) => {
   return (
     <>
@@ -15,5 +14,4 @@ const SEO = ({title,description}) => {
     </>
   )
 }
-
 export default SEO
