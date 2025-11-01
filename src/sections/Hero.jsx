@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Bookmark } from "lucide-react";
-import FrontEndSkills from "./FrontEndSkills";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   useGSAP(() => {
@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="flex flex-col sm:flex-row sm:justify-start gap-5 mt-10 w-full">
         {/* My Projects Button */}
         <div>
-          <a className="w-full sm:w-auto" href="/portfolio">
+          <Link className="w-full sm:w-auto" to="/portfolio">
             <button
               aria-label="Go to Projects page"
               className="hero-btn w-full cursor-pointer text-black dark:text-white
@@ -29,7 +29,7 @@ const Hero = () => {
             >
               My Projects
             </button>
-          </a>
+          </Link>
         </div>
 
         {/* Download CV Button */}
